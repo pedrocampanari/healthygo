@@ -1,0 +1,34 @@
+.logotype {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 10px #0b0570;
+    margin-bottom: 100px;
+}
+
+img {
+    width: 10rem;
+}
+
+.nav-text-header {
+    background-color: #0b0570;
+}
+
+.nav-text-header>p {
+    color: #eeeeee;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+body {
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+    background-color: #c1c1c2;
+    color: #c0c0c0b9;
+    height: 106px;
+}

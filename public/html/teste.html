@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calendario {
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cabecalho button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .dias-da-semana {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .dias-da-semana div {
+            width: 30px;
+            text-align: center;
+        }
+
+        .dias-do-mes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+
+        .dia {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dia:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calendario">
+        <div class="cabecalho">
+            <button id="anterior">Anterior</button>
+            <span id="mes-ano"></span>
+            <button id="proximo">Próximo</button>
+        </div>
+        <div class="dias-da-semana">
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+            <div>Dom</div>
+        </div>
+        <div id="dias-do-mes" class="dias-do-mes"></div>
+    </div>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const diasDoMesDiv = document.getElementById('dias-do-mes');
+            const mesAnoSpan = document.getElementById('mes-ano');
+            const btnAnterior = document.getElementById('anterior');
+            const btnProximo = document.getElementById('proximo');
+            let dataAtual = new Date();
+
+            function gerarCalendario(data) {
+                diasDoMesDiv.innerHTML = '';
+                const primeiroDiaDoMes = new Date(data.getFullYear(), data.getMonth(), 1);
+                const ultimoDiaDoMes = new Date(data.getFullYear(), data.getMonth() + 1, 0);
+                let diaDaSemana = primeiroDiaDoMes.getDay();
+                if (diaDaSemana === 0) diaDaSemana = 7; // Ajuste para o domingo
+                let dia = 1;
+
+                // Preencher dias do mês
+                for (let i = 1; i <= 42; i++) {
+                    if (i < diaDaSemana) {
+                        const div = document.createElement('div');
+                        div.className = 'dia';
+                        div.style.opacity = 0;
+                        diasDoMesDiv.appendChild(div);
+                    } else if (dia <= ultimoDiaDoMes.getDate()) {
+                        const div = document.createElement('div');
+                        div.className = 'dia';
+                        div.textContent = dia;
+                        div.addEventListener('click', function () {
+                            alert(`Dia ${dia} de ${getMes(data.getMonth())} de ${data.getFullYear()}`);
+                        });
+                        diasDoMesDiv.appendChild(div);
+                        dia++;
+                    } else {
+                        const div = document.createElement('div');
+                        div.className = 'dia';
+                        div.style.opacity = 0;
+                        diasDoMesDiv.appendChild(div);
+                    }
+                }
+
+                // Atualizar mês e ano exibidos
+                mesAnoSpan.textContent = `${getMes(data.getMonth())} de ${data.getFullYear()}`;
+            }
+
+            function getMes(mes) {
+                const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+                return meses[mes];
+            }
+
+            btnAnterior.addEventListener('click', function () {
+                dataAtual.setMonth(dataAtual.getMonth() - 1);
+                gerarCalendario(dataAtual);
+            });
+
+            btnProximo.addEventListener('click', function () {
+                dataAtual.setMonth(dataAtual.getMonth() + 1);
+                gerarCalendario(dataAtual);
+            });
+
+            gerarCalendario(dataAtual);
+        });
+    </script>
+</body>
+
+</html>
