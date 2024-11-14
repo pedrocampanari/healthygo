@@ -1,0 +1,14 @@
+{
+    "nome": "Policlínica de Osvaldo Cruz",
+    "tipo": "Policlínica",
+    "cidade": "Osvaldo Cruz - SP",
+    "aberto": true,
+    "espera": 15, 
+    "telefone": "(18) 99642-6748",
+    "end": "R. Armando Sales, 75 - Centro, Osvaldo Cruz - SP, 17700-000",
+    "latitude": "-21.805556", 
+    "longitude": "-50.876944", 
+    "url": "https://maps.google.com/?cid=11517030703329248962"
+}
+
+

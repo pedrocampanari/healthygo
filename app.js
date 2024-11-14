@@ -114,6 +114,6 @@ app.post('/loginValidation', async (req, res)=>{
     
 });
 
-app.listen(2321, '0.0.0.0', ()=>{
+app.listen(3000, '0.0.0.0', ()=>{
     console.log('Server is online - http://localhost:2321/');
 });

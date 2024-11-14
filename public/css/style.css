@@ -149,3 +149,11 @@ html {
     margin-top: 40px;
     letter-spacing: 4px
 }
+
+footer {
+    text-align: center;
+    margin: 0;
+    background-color: #0b0570;
+    color: #ffffffb9;
+    height: 106px;
+}
