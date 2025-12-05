@@ -3,6 +3,18 @@
     border-bottom: 1px solid #d8d8d8;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 8rem;
+}
+
+main {
+    padding-top: 8rem;
+    height: 470px;
+}
+
 img {
     width: 18rem;
 }
@@ -27,6 +39,7 @@ body {
     height: 470px;
     width: 100%;
     border: 1px solid black;
+    z-index: 0;
 }
 
 #find-hospitals {
@@ -152,8 +165,12 @@ html {
 
 footer {
     text-align: center;
-    margin: 0;
+    margin-top: 6rem;
     background-color: #0b0570;
     color: #ffffffb9;
-    height: 106px;
+    height: calc(100vh 470px);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
 }

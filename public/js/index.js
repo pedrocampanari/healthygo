@@ -5,8 +5,7 @@ button.addEventListener('click', ()=>{
 });
 
 
-var map = L.map('map').setView([-21.7967, -50.8786], 15); // São Paulo, por exemplo
-
+var map = L.map('map').setView([-20.7870, -51.7039], 15);
 // Inicializa o mapa
 
 
@@ -17,9 +16,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Pontos fixos com suas coordenadas e informações
 var pontosFixos = [
-    { lat: -21.803564, lng: -50.8781468, name: 'Santa Casa da Misericórdia de Osvaldo Cruz'},
-    { lat: -21.7974525, lng: -50.8787077, name: 'Centro de Saúde'},
+  { lat: -20.7839, lng: -51.7171, name: 'USF Santa Rita' }, // R. Alexandre Abraão, 2334
+  { lat: -20.7955, lng: -51.7103, name: 'USF Interlagos – Gabriel Marques Fernandes' }, // R. Eurídice Chagas Cruz, 521
+  { lat: -20.7873, lng: -51.6990, name: 'USF Santo André' }, // R. Coronel Augusto Corrêa da Costa, 284
+  { lat: -20.7774, lng: -51.7302, name: 'USF Vila Piloto' }, // R. 34, 250
+  { lat: -20.7741, lng: -51.7257, name: 'USF Chácara Eldorado' }, // R. Rogaciano Garcia Moreira, S/N
+  { lat: -20.7804, lng: -51.7034, name: 'UPA 24h' } // R. Irmãos Spinelli, 1855
 ];
+
 
 // Adiciona os marcadores no mapa
 pontosFixos.forEach(function(ponto) {

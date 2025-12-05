@@ -1,14 +1,74 @@
-{
-    "nome": "Policlínica de Osvaldo Cruz",
-    "tipo": "Policlínica",
-    "cidade": "Osvaldo Cruz - SP",
+[
+  {
+    "nome": "UNIDADE DE SAUDE DA FAMILIA VILA ALEGRE",
+    "tipo": "Centro de Saúde/Unidade Básica",
+    "cidade": "Três Lagoas",
     "aberto": true,
-    "espera": 15, 
-    "telefone": "(18) 99642-6748",
-    "end": "R. Armando Sales, 75 - Centro, Osvaldo Cruz - SP, 17700-000",
-    "latitude": "-21.805556", 
-    "longitude": "-50.876944", 
-    "url": "https://maps.google.com/?cid=11517030703329248962"
-}
-
-
+    "espera": 30,
+    "telefone": "(67) 99239-5430",
+    "cnes": "2757133",
+    "lat": "-20.7818",
+    "lng": "-51.6826",
+    "url": "http://cnes2.datasus.gov.br/Mod_Conjunto.asp?VCo_Unidade=5008302757133"
+  },
+  {
+    "nome": "CENTRO DE ATENCAO PSICOSSOCIAL ALCOOL E OUTRAS DROGAS CAPSAD",
+    "tipo": "CAPS - Álcool e Drogas",
+    "cidade": "Três Lagoas",
+    "aberto": true,
+    "espera": 15,
+    "telefone": "(67) 3929-9942 (Prefeitura - central)",
+    "cnes": "6726747",
+    "lat": "-20.7885",
+    "lng": "-51.6705",
+    "url": "https://cnes2.datasus.gov.br/Lista_Es_Municipio.asp?VEstado=50&VCodMunicipio=500830"
+  },
+  {
+    "nome": "BANCO DE SANGUE DO HOSPITAL NOSSA SENHORA AUXILIADORA",
+    "tipo": "Banco de Sangue (Unidade Hospitalar)",
+    "cidade": "Três Lagoas",
+    "aberto": true,
+    "espera": 45,
+    "telefone": "(67) 3509-8000 (Central do Hospital)",
+    "cnes": "3101290",
+    "lat": "-20.7836",
+    "lng": "-51.6841",
+    "url": "https://cnes2.datasus.gov.br/Lista_Es_Municipio.asp?VEstado=50&VCodMunicipio=500830"
+  },
+  {
+    "nome": "HOSPITAL NOSSA SENHORA AUXILIADORA",
+    "tipo": "Hospital Geral",
+    "cidade": "Três Lagoas",
+    "aberto": true,
+    "espera": 60,
+    "telefone": "(67) 3509-8000",
+    "cnes": "2757052",
+    "lat": "-20.7836",
+    "lng": "-51.6841",
+    "url": "https://cnes2.datasus.gov.br/Mod_Conjunto.asp?VCo_Unidade=5008302757052"
+  },
+  {
+    "nome": "CLÍNICA ESPECIALIZADA SAÚDE PLENA",
+    "tipo": "Clínica de Especialidades",
+    "cidade": "Três Lagoas",
+    "aberto": true,
+    "espera": 10,
+    "telefone": "(67) 3521-4444",
+    "cnes": "2757206 (exemplo)",
+    "lat": "-20.7890",
+    "lng": "-51.6912",
+    "url": ""
+  },
+  {
+    "nome": "UNIDADE DE PRONTO ATENDIMENTO UPA 24 HORAS",
+    "tipo": "Unidade de Pronto Atendimento (UPA)",
+    "cidade": "Três Lagoas",
+    "aberto": true,
+    "espera": 90,
+    "telefone": "(67) 3522-8000 (Central de Urgência)",
+    "cnes": "9369324",
+    "lat": "-20.7855",
+    "lng": "-51.6601",
+    "url": "https://cnes2.datasus.gov.br/Mod_Conjunto.asp?VCo_Unidade=5008309369324"
+  }
+]
